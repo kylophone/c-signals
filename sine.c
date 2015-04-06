@@ -19,4 +19,4 @@ int main(void) {
 
 //Creates a 5-second file (`sine.raw`) containing a 1k sine tone. 32-bit floating point raw PCM. 
 //You can play this back with SoX like this:
-//play -c 1 -r 48000 -b 32 -e float -t raw out.raw
+//play -c 1 -r 48000 -b 32 -e float -t raw sine.raw
