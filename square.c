@@ -21,4 +21,4 @@ int main(void) {
 
 //Creates a 5-second file (`square.raw`) containing a 1k square tone. 32-bit 48k floating point raw PCM. 
 //You can play this back with SoX like this:
-//play -c 1 -r 48000 -b 32 -e float -t raw out.raw
+//play -c 1 -r 48000 -b 32 -e float -t raw square.raw
