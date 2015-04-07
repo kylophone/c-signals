@@ -9,11 +9,14 @@
 
 int main(void) {
 	FILE *file = fopen("square.raw", "wb");
-
+	
 	for (int i = 0; i < NUM_SAMPLES; i++) { 
-		float sample = sin(2 * M_PI * FREQ * i / SAMPLING_RATE);
-		if (sample > 0) sample = 1;
-		if (sample <= 0) sample = -1; 
+		float sample = 0;
+
+		for (int harmonic = 1; (FREQ * harmonic) <= (SAMPLING_RATE / 2); harmonic += 2) {
+			sample += sin(2 * M_PI * harmonic * FREQ * i / SAMPLING_RATE) / harmonic;
+		}
+
 		fwrite(&sample, sizeof(float), 1, file);
 	}
 	fclose(file);
