@@ -6,6 +6,7 @@ Example audio oscillators in C. Each oscillator is implemeted in less than 30 li
 ## Usage
 Compile and run. 
 ```
+gcc ./sine.c -o sine
 ./sine
 ```
 This will create a 32-bit floating point 48kHz raw PCM file called `sine.raw`.
