@@ -14,12 +14,11 @@ int main(void) {
 		float sample = 0;
 
 		for (int harmonic = 1; (FREQ * harmonic) <= (SAMPLING_RATE / 2); harmonic += 1) {
-			sample += sin(2 * M_PI * harmonic * FREQ * i / SAMPLING_RATE) / harmonic;
+			sample += -1 * sin(2 * M_PI * harmonic * FREQ * i / SAMPLING_RATE) / harmonic;
 		}
 
 		sample *= (1.0 / 2);
-
-		printf("%f\n", sample);
+		
 		fwrite(&sample, sizeof(float), 1, file);
 	}
 	fclose(file);
