@@ -13,7 +13,7 @@ int main(void) {
 	for (int i = 0; i < NUM_SAMPLES; i++) { 
 		float sample = 0;
 
-		for (int harmonic = 1; (FREQ * harmonic) <= (SAMPLING_RATE / 2); harmonic += 1) {
+		for (int harmonic = 1; (FREQ * harmonic) <= (SAMPLING_RATE / 2); harmonic++) {
 			sample += -1 * sin(2 * M_PI * harmonic * FREQ * i / SAMPLING_RATE) / harmonic;
 		}
 
