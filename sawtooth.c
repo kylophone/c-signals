@@ -18,7 +18,6 @@ int main(void) {
 		}
 
 		sample *= (1.0 / 2);
-		
 		fwrite(&sample, sizeof(float), 1, file);
 	}
 	fclose(file);
